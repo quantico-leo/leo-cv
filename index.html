@@ -3,32 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Leo Celija – Résumé</title>
+  <title>Leo Celija · Résumé</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     :root{
       --navy:#0b2740; --navy-2:#113356; --navy-3:#143a60;
       --gold:#e3b23c; --gold-700:#c59623;
     }
-    /* Ensure colors & backgrounds print beautifully */
-    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-    body {
-      background: linear-gradient(180deg,var(--navy) 0%, var(--navy-2) 65%, var(--navy-3) 100%);
-    }
-
-    /* One-page A4 print setup */
-    @media print {
-      @page { size: A4; margin: 10mm; }
-      html, body { background: linear-gradient(180deg,var(--navy) 0%, var(--navy-2) 65%, var(--navy-3) 100%) !important; }
-      .print\:hidden { display: none !important; }
-      .print\:ring-0, .print\:shadow-none { box-shadow: none !important; }
-      h1 { font-size: 22px !important; line-height: 1.2 !important; }
-      .print-sm { font-size: 11px !important; line-height: 1.35 !important; }
-      .print-tight { padding: 14px !important; }
-      .print-tight-y { padding-top: 8px !important; padding-bottom: 8px !important; }
-      #qrPopover.hidden { display:none !important; }
-      /* Prevent split */
-      article, header, section { page-break-inside: avoid; }
+    *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:linear-gradient(180deg,var(--navy) 0%, var(--navy-2) 65%, var(--navy-3) 100%); }
+    @media print{
+      @page{ size:A4; margin:10mm; }
+      html,body{ background:linear-gradient(180deg,var(--navy) 0%, var(--navy-2) 65%, var(--navy-3) 100%) !important; }
+      .print\:hidden{ display:none !important; }
+      .print\:ring-0,.print\:shadow-none{ box-shadow:none !important; }
+      h1{ font-size:22px !important; line-height:1.2 !important; }
+      .print-sm{ font-size:11px !important; line-height:1.35 !important; }
+      .print-tight{ padding:14px !important; }
+      .print-tight-y{ padding-top:8px !important; padding-bottom:8px !important; }
+      #qrPopover.hidden{ display:none !important; }
+      article,header,section{ page-break-inside:avoid; }
     }
   </style>
 </head>
@@ -36,9 +30,9 @@
 
   <!-- Topbar -->
   <div class="sticky top-0 z-40 border-b border-white/10 print:hidden"
-       style="background:color-mix(in srgb, var(--navy) 85%, transparent); backdrop-filter: blur(6px);">
+       style="background:color-mix(in srgb, var(--navy) 85%, transparent); backdrop-filter:blur(6px);">
     <div class="mx-auto max-w-4xl px-4 py-2 flex items-center gap-3 text-white">
-      <span class="text-xs/5 opacity-90">Leo Celija – Résumé (A4)</span>
+      <span class="text-xs/5 opacity-90">Leo Celija · Résumé (A4)</span>
       <div class="ml-auto">
         <button onclick="window.print()"
           class="rounded-full px-3 py-1.5 text-xs font-semibold bg-[var(--gold)] hover:bg-[var(--gold-700)] text-[var(--navy)] shadow">
@@ -56,7 +50,7 @@
       <header class="p-6 pb-3 md:p-8 md:pb-4 print-tight">
         <h1 class="text-2xl md:text-3xl font-semibold tracking-tight">Leo Celija</h1>
         <p class="mt-1 max-w-3xl text-neutral-700 leading-relaxed print-sm">
-          Managing Director / Co-Founder · Sales Acceleration · Liquidity · Sales Coaching
+          Managing Director · Co-Founder · Sales Acceleration · Liquidity · Sales Coaching
         </p>
 
         <!-- Contacts -->
@@ -66,21 +60,21 @@
             <span>Gothenburg, Sweden</span>
             <a class="underline decoration-neutral-300 hover:decoration-neutral-800" href="tel:+46737846011">+46 737 846011</a>
             <a class="underline decoration-neutral-300 hover:decoration-neutral-800" href="mailto:leo.celija@gmail.com">leo.celija@gmail.com</a>
-            <a class="underline decoration-neutral-300 hover:decoration-neutral-800" href="https://linkedin.com/in/leocelija" target="_blank" rel="noopener">linkedin.com/in/leocelija</a>
+            <a class="underline decoration-neutral-300 hover:decoration-neutral-800" target="_blank" rel="noopener" href="https://linkedin.com/in/leocelija">linkedin.com/in/leocelija</a>
           </div>
 
           <div class="ml-auto flex items-center gap-2">
-            <!-- WhatsApp icon pill -->
+            <!-- WhatsApp (gold pill with icon) -->
             <a title="WhatsApp"
                class="inline-flex items-center justify-center rounded-full w-8 h-8 bg-[var(--gold)] hover:bg-[var(--gold-700)] text-[var(--navy)] ring-1 ring-neutral-300 hover:ring-neutral-600"
-               href="https://wa.me/46737846011?text=Hi%20Leo%2C%20I%20saw%20your%20r%C3%A9sum%C3%A9%20and%20would%20like%20to%20connect."
+               href="https://wa.me/46737846011?text=Hi%20Leo%2C%20I%20saw%20your%20resume%20and%20would%20like%20to%20connect."
                target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
                 <path d="M20.52 3.48A11.94 11.94 0 0 0 12.02 0C5.4 0 .03 5.37.03 12c0 2.11.55 4.17 1.6 5.99L0 24l6.2-1.62a11.96 11.96 0 0 0 5.82 1.57h.01c6.62 0 12-5.37 12-12 0-3.2-1.25-6.2-3.51-8.47ZM12.03 22.02h-.01a9.96 9.96 0 0 1-5.07-1.39l-.36-.21-3.68.96.98-3.58-.23-.37A9.96 9.96 0 0 1 2.05 12C2.05 6.49 6.52 2.02 12 2.02c2.66 0 5.16 1.04 7.04 2.92a9.9 9.9 0 0 1 2.91 7.06c0 5.49-4.47 9.96-9.92 9.96Zm5.68-7.46c-.31-.16-1.85-.92-2.14-1.03-.29-.11-.5-.16-.71.16-.2.31-.81 1.03-1 1.24-.18.2-.37.23-.68.08-.31-.16-1.32-.49-2.51-1.57-.93-.83-1.56-1.86-1.74-2.17-.18-.31-.02-.48.14-.64.14-.14.31-.37.46-.55.15-.18.2-.31.31-.52.1-.21.05-.39-.03-.55-.08-.16-.71-1.71-.97-2.35-.25-.6-.5-.52-.71-.53l-.61-.01c-.2 0-.53.08-.81.39-.28.31-1.06 1.04-1.06 2.53 0 1.49 1.09 2.93 1.24 3.13.15.2 2.15 3.28 5.21 4.6.73.32 1.29.51 1.73.65.73.23 1.4.2 1.93.12.59-.09 1.85-.76 2.11-1.49.26-.73.26-1.35.18-1.49-.08-.14-.28-.22-.59-.38Z"/>
               </svg>
             </a>
 
-            <!-- LinkedIn QR button -->
+            <!-- LinkedIn QR (gold pill) -->
             <button id="qrToggle"
               class="inline-flex items-center justify-center rounded-full px-2.5 h-8 text-[11px] font-semibold bg-[var(--gold)] hover:bg-[var(--gold-700)] text-[var(--navy)] ring-1 ring-neutral-300 hover:ring-neutral-600"
               type="button" aria-expanded="false" aria-controls="qrPopover">
@@ -103,7 +97,7 @@
       <section class="px-6 md:px-8 pb-1 print-tight-y">
         <h2 class="pt-1 pb-1 text-[10px] tracking-[0.35em] text-neutral-600">WHO I AM</h2>
         <p class="text-[13px] leading-[1.5] text-neutral-800 print-sm">
-          Operator-consultant and closer. I step into messy situations, bring order, and move revenue and cash forward fast — quietly and hands-on.
+          Operator-consultant and closer. I step into messy situations, bring order, and move revenue and cash forward fast · quietly and hands-on.
         </p>
       </section>
 
@@ -113,40 +107,44 @@
           <li>Lift pipeline and close rates</li>
           <li>Recover and unlock liquidity</li>
           <li>Install a simple weekly sales rhythm with clear KPIs</li>
-          <li>Coach founders/teams live on real deals</li>
+          <li>Coach founders and teams live on real deals</li>
         </ul>
       </section>
 
       <section class="px-6 md:px-8 pb-1 print-tight-y">
         <h2 class="pt-2 pb-1 text-[10px] tracking-[0.35em] text-neutral-600">HOW I MAKE IT HAPPEN</h2>
         <ul class="list-disc pl-5 text-[13px] leading-[1.5] text-neutral-900 space-y-0.5 print-sm">
-          <li><b>61 client engagements</b> with ~85% liquidity recovery (2022–2025)</li>
-          <li><b>SEK 1.8M</b> in 7 months via productised offers & partner network</li>
-          <li><b>≤2-week KPI lift</b> by installing tight cadences & deal playbooks</li>
+          <li><b>61 client engagements</b> with ~85% liquidity recovery (2022·2025)</li>
+          <li><b>SEK 1.8M</b> in 7 months via productised offers and partner network</li>
+          <li><b>≤2-week KPI lift</b> by installing tight cadences and deal playbooks</li>
         </ul>
       </section>
 
-      <!-- Short past experience -->
+      <!-- Short past experience · roles clearly marked -->
       <section class="px-6 md:px-8 pb-1 print-tight-y">
         <h2 class="pt-2 pb-1 text-[10px] tracking-[0.35em] text-neutral-600">SHORT PAST EXPERIENCE</h2>
         <div class="grid md:grid-cols-2 gap-3 text-[13px] leading-[1.5] text-neutral-800 print-sm">
           <div class="rounded-xl p-3 ring-1 ring-neutral-200">
             <div class="flex items-baseline justify-between gap-2">
-              <h3 class="font-medium tracking-tight">Founder & Managing Partner — ArceoConsult</h3>
-              <span class="text-[11px] text-neutral-600">2025–present</span>
+              <h3 class="font-semibold tracking-tight">
+                Founder & Managing Partner · <span class="font-semibold">ArceoConsult</span>
+              </h3>
+              <span class="text-[11px] text-neutral-600">2025·present</span>
             </div>
             <ul class="mt-1 list-disc pl-5 space-y-0.5">
-              <li>48h diagnostic; 30–60d resets (Sales • People • Liquidity)</li>
+              <li>48h diagnostic; 30·60d resets (Sales · People · Liquidity)</li>
               <li>Productised offers; simple dashboards; weekly cadence</li>
             </ul>
           </div>
           <div class="rounded-xl p-3 ring-1 ring-neutral-200">
             <div class="flex items-baseline justify-between gap-2">
-              <h3 class="font-medium tracking-tight">Founder & CEO — SweInvest Finance AB</h3>
-              <span class="text-[11px] text-neutral-600">2022–present</span>
+              <h3 class="font-semibold tracking-tight">
+                Founder & CEO · <span class="font-semibold">SweInvest Finance AB</span>
+              </h3>
+              <span class="text-[11px] text-neutral-600">2022·present</span>
             </div>
             <ul class="mt-1 list-disc pl-5 space-y-0.5">
-              <li>Cash-recovery & liquidity solutions for SMEs</li>
+              <li>Cash-recovery and liquidity solutions for SMEs</li>
               <li>Built EU partner network; consistent measurable outcomes</li>
             </ul>
           </div>
@@ -162,21 +160,22 @@
           <div>
             <h2 class="pt-2 pb-1 text-[10px] tracking-[0.35em] text-neutral-600">EDUCATION</h2>
             <ul class="list-disc pl-5 space-y-0.5">
-              <li>MSc Political Science — University of Gothenburg</li>
-              <li>Economics studies (selection) — University of Gothenburg</li>
+              <li>MSc Political Science · University of Gothenburg</li>
+              <li>Economics studies (selection) · University of Gothenburg</li>
             </ul>
           </div>
           <div>
             <h2 class="pt-2 pb-1 text-[10px] tracking-[0.35em] text-neutral-600">LANGUAGES</h2>
             <ul class="list-disc pl-5 space-y-0.5">
-              <li>Swedish — Native</li>
-              <li>English — Professional</li>
+              <li>Swedish · Native</li>
+              <li>English · Professional</li>
             </ul>
           </div>
           <div>
             <h2 class="pt-2 pb-1 text-[10px] tracking-[0.35em] text-neutral-600">SERVICES</h2>
             <p>Sales Acceleration · Liquidity · Sales Coaching</p>
-            <div class="mt-2 rounded-2xl p-3 text-[11px]" style="background:var(--gold); color:var(--navy);">
+            <div class="mt-2 rounded-2xl p-3 text-[11px]"
+                 style="background:var(--gold); color:var(--navy);">
               Next step: 30-min discovery on a live account. If useful, we shape a joint SOW; if not, you keep the notes.
             </div>
           </div>
@@ -187,7 +186,7 @@
     </article>
 
     <p class="mt-3 text-center text-[11px] text-white/80 print:hidden">
-      Tip: when exporting to PDF, enable “Background graphics” if your browser asks.
+      Tip: when exporting to PDF, enable “Background graphics”.
     </p>
   </main>
 
