@@ -10,8 +10,11 @@
       --navy:#0b2740; --navy-2:#113356; --navy-3:#143a60;
       --gold:#e3b23c; --gold-700:#c59623;
     }
+    /* Base + ensure colors print */
     *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
     body{ background:linear-gradient(180deg,var(--navy) 0%, var(--navy-2) 65%, var(--navy-3) 100%); }
+
+    /* One A4 page print */
     @media print{
       @page{ size:A4; margin:10mm; }
       html,body{ background:linear-gradient(180deg,var(--navy) 0%, var(--navy-2) 65%, var(--navy-3) 100%) !important; }
@@ -21,9 +24,14 @@
       .print-sm{ font-size:11px !important; line-height:1.35 !important; }
       .print-tight{ padding:14px !important; }
       .print-tight-y{ padding-top:8px !important; padding-bottom:8px !important; }
-      #qrPopover.hidden{ display:none !important; }
+      #qrPopover{ display:none !important; }  /* håll QR stängd i PDF */
       article,header,section{ page-break-inside:avoid; }
     }
+
+    /* Gold card print tweaks */
+    .gold-card li::marker{ color:var(--navy); }
+    .gold-card{ line-height:1.5; }
+    @media print{ .gold-card{ line-height:1.35 !important; } }
   </style>
 </head>
 <body class="min-h-screen text-neutral-900 antialiased">
@@ -120,11 +128,11 @@
         </ul>
       </section>
 
-      <!-- Short past experience · now GOLD cards -->
+      <!-- Short past experience (gold cards) -->
       <section class="px-6 md:px-8 pb-1 print-tight-y">
         <h2 class="pt-2 pb-1 text-[10px] tracking-[0.35em] text-neutral-600">SHORT PAST EXPERIENCE</h2>
         <div class="grid md:grid-cols-2 gap-3 text-[13px] leading-[1.5] print-sm">
-          <div class="rounded-xl p-3 ring-1 ring-[color:var(--gold-700)]"
+          <div class="gold-card rounded-xl p-3 ring-1 ring-[color:var(--gold-700)]"
                style="background:var(--gold); color:var(--navy);">
             <div class="flex items-baseline justify-between gap-2">
               <h3 class="font-semibold tracking-tight">
@@ -137,7 +145,8 @@
               <li>Productised offers; simple dashboards; weekly cadence</li>
             </ul>
           </div>
-          <div class="rounded-xl p-3 ring-1 ring-[color:var(--gold-700)]"
+
+          <div class="gold-card rounded-xl p-3 ring-1 ring-[color:var(--gold-700)]"
                style="background:var(--gold); color:var(--navy);">
             <div class="flex items-baseline justify-between gap-2">
               <h3 class="font-semibold tracking-tight">
@@ -151,6 +160,7 @@
             </ul>
           </div>
         </div>
+
         <p class="mt-2 text-[11px] text-neutral-600 print-sm">
           Earlier: Göteborg Energi (Corporate Manager) · United Cash Back (Nordic Sales Exec) · Fisher Investments Europe (Regional Sales) · Skandia (Financial Advisor)
         </p>
@@ -176,7 +186,6 @@
           <div>
             <h2 class="pt-2 pb-1 text-[10px] tracking-[0.35em] text-neutral-600">SERVICES</h2>
             <p>Sales Acceleration · Liquidity · Sales Coaching</p>
-            <!-- Gold CTA box -->
             <div class="mt-2 rounded-2xl p-3 text-[11px]" style="background:var(--gold); color:var(--navy);">
               Next step: 30-min discovery on a live account. If useful, we shape a joint SOW; if not, you keep the notes.
             </div>
@@ -188,7 +197,7 @@
     </article>
 
     <p class="mt-3 text-center text-[11px] text-white/80 print:hidden">
-      Tip: when exporting to PDF, enable “Background graphics”.
+      Tip: when exporting to PDF, turn **Background graphics ON** and set **Scale ~90–95%** if it spills to page 2.
     </p>
   </main>
 
