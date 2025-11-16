@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Leo Celija – CV</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @media print {
+      @page { size: A4; margin: 12mm; }
+      html, body { background: #fff !important; }
+      .print\:hidden { display: none !important; }
+      .print\:shadow-none { box-shadow: none !important; }
+      .print\:ring-0 { box-shadow: none !important; }
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-neutral-50 text-neutral-900 antialiased">
+  <!-- Topbar -->
+  <div class="sticky top-0 z-40 bg-neutral-50/80 backdrop-blur border-b border-neutral-200 print:hidden">
+    <div class="mx-auto max-w-4xl px-4 py-3 flex items-center gap-3">
+      <span class="text-sm text-neutral-600">Leo Celija – CV (A4)</span>
+      <div class="ml-auto">
+        <button onclick="window.print()" class="rounded-2xl px-4 py-2 text-sm font-medium bg-black text-white shadow hover:shadow-md active:translate-y-px">
+          Print / Save PDF
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page -->
+  <main class="mx-auto max-w-4xl p-6 print:p-10">
+    <article class="bg-white rounded-3xl shadow-sm ring-1 ring-neutral-200 print:shadow-none print:ring-0">
+      <!-- Header -->
+      <header class="p-8 pb-4 md:p-10 md:pb-6">
+        <h1 class="text-3xl md:text-4xl font-semibold tracking-tight">Leo Celija</h1>
+        <p class="mt-2 max-w-3xl text-neutral-700 leading-relaxed">
+          Managing Director / Co-Founder — Sales Acceleration • Investor Liquidity • Sales Coaching (Nordics)
+        </p>
+
+        <!-- Contacts + actions -->
+        <div class="mt-4 flex flex-wrap items-center gap-3 text-sm text-neutral-700">
+          <div class="flex items-center gap-2 mr-2">
+            <span class="inline-block size-2 rounded-full bg-emerald-500"></span>
+            Gothenburg, Sweden
+          </div>
+
+          <!-- Phone -->
+          <a class="underline decoration-neutral-300 hover:decoration-neutral-800"
+             href="tel:+46737846011">+46 737 846011</a>
+
+          <!-- WhatsApp beside phone -->
+          <a class="px-2 py-1 rounded-full ring-1 ring-neutral-300 hover:ring-neutral-600"
+             href="https://wa.me/46737846011?text=Hi%20Leo%2C%20I%20saw%20your%20CV%20and%20would%20like%20to%20connect."
+             target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+             WhatsApp
+          </a>
+
+          <!-- Email -->
+          <a class="underline decoration-neutral-300 hover:decoration-neutral-800"
+             href="mailto:leo.celija@gmail.com">leo.celija@gmail.com</a>
+
+          <!-- LinkedIn link -->
+          <a class="underline decoration-neutral-300 hover:decoration-neutral-800"
+             href="https://linkedin.com/in/leocelija" target="_blank" rel="noopener">
+             linkedin.com/in/leocelija
+          </a>
+
+          <!-- QR toggle -->
+          <button id="qrToggle"
+            class="ml-auto px-3 py-1.5 rounded-full text-xs ring-1 ring-neutral-300 hover:ring-neutral-600 print:hidden"
+            type="button" aria-expanded="false" aria-controls="qrCard">
+            LinkedIn QR
+          </button>
+        </div>
+
+        <!-- LinkedIn QR -->
+        <div id="qrCard"
+             class="hidden mt-3 w-[210px] rounded-2xl ring-1 ring-neutral-200 p-3 bg-white">
+          <img
+            class="mx-auto block"
+            src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https%3A%2F%2Flinkedin.com%2Fin%2Fleocelija"
+            alt="LinkedIn QR: linkedin.com/in/leocelija" width="180" height="180">
+          <div class="mt-2 text-center text-xs text-neutral-600">Scan to open LinkedIn</div>
+        </div>
+      </header>
+
+      <!-- Compact content (≈1–1.5 page) -->
+      <section class="px-8 md:px-10 pb-2">
+        <h2 class="pt-1 pb-2 text-xs tracking-[0.35em] text-neutral-600">PROFILE</h2>
+        <p class="text-sm leading-6 text-neutral-800">
+          Operator-consultant and rainmaker. I help SME leaders create order, unlock cash, and win deals fast — hands-on, discreet, precise.
+        </p>
+      </section>
+
+      <section class="px-8 md:px-10 pb-2">
+        <h2 class="pt-3 pb-2 text-xs tracking-[0.35em] text-neutral-600">CORE STRENGTHS</h2>
+        <ul class="list-disc pl-5 text-sm leading-6 text-neutral-800 space-y-1">
+          <li>Sales acceleration & pipeline lift</li>
+          <li>Investor liquidity & secondaries</li>
+          <li>Deal playbooks and live coaching</li>
+          <li>48h diagnostics & 30–60d resets</li>
+          <li>Stakeholder trust, simple KPIs</li>
+        </ul>
+      </section>
+
+      <section class="px-8 md:px-10 pb-2">
+        <h2 class="pt-3 pb-2 text-xs tracking-[0.35em] text-neutral-600">SIGNATURE RESULTS</h2>
+        <ul class="list-disc pl-5 text-sm leading-6 text-neutral-900 space-y-1">
+          <li>61 client cases with ~85% liquidity recovery (2022–2025)</li>
+          <li>SEK 1.8M in 7 months via productised offers + partners</li>
+          <li>KPI lift ≤2 weeks with Guardian Model™</li>
+          <li>External agent engine driving qualified EU/Nordics pipeline</li>
+          <li>Industrial services (~SEK 250m): IM in 14 days; 18-buyer shortlist; mandate won</li>
+        </ul>
+      </section>
+
+      <section class="px-8 md:px-10 pb-2">
+        <h2 class="pt-3 pb-2 text-xs tracking-[0.35em] text-neutral-600">RECENT EXPERIENCE</h2>
+        <div class="grid md:grid-cols-2 gap-4 text-sm leading-6 text-neutral-800">
+          <div class="rounded-2xl p-4 ring-1 ring-neutral-200">
+            <div class="flex items-baseline justify-between gap-2">
+              <h3 class="font-medium tracking-tight">Founder & Managing Partner — ArceoConsult</h3>
+              <span class="text-xs text-neutral-600">2025–present</span>
+            </div>
+            <ul class="mt-1 list-disc pl-5 space-y-1">
+              <li>48h diagnostic; 30–60d reset across Sales • People • Liquidity</li>
+              <li>Productised services; weekly cadence and simple dashboards</li>
+            </ul>
+          </div>
+          <div class="rounded-2xl p-4 ring-1 ring-neutral-200">
+            <div class="flex items-baseline justify-between gap-2">
+              <h3 class="font-medium tracking-tight">Founder & CEO — SweInvest Finance AB</h3>
+              <span class="text-xs text-neutral-600">2022–present</span>
+            </div>
+            <ul class="mt-1 list-disc pl-5 space-y-1">
+              <li>VHF Method™ across 61 cases; 70/30 loss-deduction structures</li>
+              <li>Partner network across EU; measurable cash recovery</li>
+            </ul>
+          </div>
+        </div>
+        <p class="mt-2 text-xs text-neutral-600">
+          Earlier: Göteborg Energi (Corporate Manager) • United Cash Back (Nordic Sales Exec) • Fisher Investments Europe (Regional Sales) • Skandia (Financial Advisor)
+        </p>
+      </section>
+
+      <section class="px-8 md:px-10 pb-2">
+        <div class="grid md:grid-cols-3 gap-6 text-sm leading-6 text-neutral-800">
+          <div>
+            <h2 class="pt-3 pb-2 text-xs tracking-[0.35em] text-neutral-600">EDUCATION</h2>
+            <ul class="list-disc pl-5 space-y-1">
+              <li>MSc Political Science — University of Gothenburg</li>
+              <li>Economics studies (selection) — University of Gothenburg</li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="pt-3 pb-2 text-xs tracking-[0.35em] text-neutral-600">LANGUAGES</h2>
+            <ul class="list-disc pl-5 space-y-1">
+              <li>Swedish — Native</li>
+              <li>English — Professional</li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="pt-3 pb-2 text-xs tracking-[0.35em] text-neutral-600">SERVICES</h2>
+            <p>Sales Acceleration • Investor Liquidity • Sales Coaching</p>
+            <div class="mt-2 rounded-2xl border border-neutral-200 p-3 text-xs text-neutral-700">
+              Next step: 30-min discovery on a live account. If useful, we shape a joint SOW; if not, you keep the notes.
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="h-6"></div>
+    </article>
+
+    <p class="mt-4 text-center text-xs text-neutral-500 print:hidden">
+      Tip: Print → Save as PDF for a tight 1–1.5 page.
+    </p>
+  </main>
+
+  <script>
+    // Toggle LinkedIn QR
+    (function(){
+      const toggleBtn = document.getElementById('qrToggle');
+      const qr = document.getElementById('qrCard');
+      if (toggleBtn && qr) {
+        toggleBtn.addEventListener('click', () => {
+          qr.classList.toggle('hidden');
+          const open = !qr.classList.contains('hidden');
+          toggleBtn.setAttribute('aria-expanded', String(open));
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
