@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Leo Celija – CV</title>
+  <!-- Tailwind via CDN (räcker för en enkel sida) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @media print {
+      @page { size: A4; margin: 12mm; }
+      html, body { background: #fff !important; }
+      .print\:hidden { display: none !important; }
+      .print\:ring-0 { box-shadow: none !important; }
+      .print\:shadow-none { box-shadow: none !important; }
+      .print\:p-10 { padding: 2.5rem !important; }
+    }
+  </style>
+</head>
+<body class="min-h-screen w-full bg-neutral-50 text-neutral-900 antialiased">
+  <!-- Top bar -->
+  <div class="sticky top-0 z-40 bg-neutral-50/70 backdrop-blur border-b border-neutral-200 print:hidden">
+    <div class="mx-auto max-w-4xl px-4 py-3 flex items-center justify-between gap-3">
+      <div class="text-sm text-neutral-600" id="modeLabel">One-Pager CV • A4 • Compact</div>
+      <div class="flex items-center gap-3">
+        <label class="inline-flex items-center gap-2 text-sm">
+          <input id="compactToggle" type="checkbox" class="size-4" checked />
+          Compact
+        </label>
+        <button onclick="window.print()" class="rounded-2xl px-4 py-2 text-sm font-medium bg-black text-white shadow hover:shadow-md active:translate-y-px">
+          Print / Save PDF
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page -->
+  <main class="mx-auto max-w-4xl p-6 print:p-10">
+    <article class="bg-white rounded-3xl shadow-sm ring-1 ring-neutral-200 print:shadow-none print:ring-0" id="page">
+      <!-- Header -->
+      <header class="p-8 pb-4 md:p-10 md:pb-6">
+        <h1 class="text-3xl md:text-4xl font-semibold tracking-tight">Leo Celija</h1>
+        <p class="mt-2 max-w-3xl text-neutral-700 leading-relaxed">
+          Managing Director / Co-Founder — Sales Acceleration • Investor Liquidity • Sales Coaching (Nordics)
+        </p>
+        <div class="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm text-neutral-700">
+          <div class="flex items-center gap-2">
+            <span class="inline-block size-2 rounded-full bg-emerald-500"></span> Gothenburg, Sweden
+          </div>
+          <a class="underline decoration-neutral-300 hover:d
