@@ -16,17 +16,26 @@
 
     /* One A4 page print */
     @media print{
-      @page{ size:A4; margin:10mm; }
-      html,body{ background:linear-gradient(180deg,var(--navy) 0%, var(--navy-2) 65%, var(--navy-3) 100%) !important; }
-      .print\:hidden{ display:none !important; }
-      .print\:ring-0,.print\:shadow-none{ box-shadow:none !important; }
-      h1{ font-size:22px !important; line-height:1.2 !important; }
-      .print-sm{ font-size:11px !important; line-height:1.35 !important; }
-      .print-tight{ padding:14px !important; }
-      .print-tight-y{ padding-top:8px !important; padding-bottom:8px !important; }
-      #qrPopover{ display:none !important; }  /* håll QR stängd i PDF */
-      article,header,section{ page-break-inside:avoid; }
-    }
+  @page{ size:A4; margin:10mm; }
+
+  /* 1) Gör bakgrunden helt vit i PDF */
+  html, body{ background:#ffffff !important; }
+
+  /* 2) Dölj topbaren och skuggor så det blir rent */
+  .print\:hidden{ display:none !important; }
+  .print\:ring-0, .print\:shadow-none{ box-shadow:none !important; }
+
+  /* 3) Kompakt typografi för en sida */
+  h1{ font-size:22px !important; line-height:1.2 !important; }
+  .print-sm{ font-size:11px !important; line-height:1.35 !important; }
+  .print-tight{ padding:14px !important; }
+  .print-tight-y{ padding-top:8px !important; padding-bottom:8px !important; }
+
+  /* 4) Stäng QR i PDF och undvik sidbrytningar inne i sektioner */
+  #qrPopover{ display:none !important; }
+  article, header, section{ page-break-inside: avoid; }
+}
+
 
     /* Gold card print tweaks */
     .gold-card li::marker{ color:var(--navy); }
