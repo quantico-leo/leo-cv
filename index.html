@@ -6,22 +6,31 @@
   <title>Leo Celija – CV</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    :root{
+      --navy:#0b2740;
+      --gold:#e3b23c;
+      --gold-700:#c59623;
+    }
     @media print {
       @page { size: A4; margin: 12mm; }
-      html, body { background: #fff !important; }
+      html, body { background:#fff !important; }
       .print\:hidden { display: none !important; }
       .print\:shadow-none { box-shadow: none !important; }
       .print\:ring-0 { box-shadow: none !important; }
     }
   </style>
 </head>
-<body class="min-h-screen bg-neutral-50 text-neutral-900 antialiased">
+<body class="min-h-screen text-neutral-900 antialiased"
+      style="background:linear-gradient(180deg,var(--navy) 0%, #113356 65%, #143a60 100%);">
+
   <!-- Topbar -->
-  <div class="sticky top-0 z-40 bg-neutral-50/80 backdrop-blur border-b border-neutral-200 print:hidden">
-    <div class="mx-auto max-w-4xl px-4 py-3 flex items-center gap-3">
-      <span class="text-sm text-neutral-600">Leo Celija – CV (A4)</span>
-      <div class="ml-auto">
-        <button onclick="window.print()" class="rounded-2xl px-4 py-2 text-sm font-medium bg-black text-white shadow hover:shadow-md active:translate-y-px">
+  <div class="sticky top-0 z-40 border-b border-white/10 print:hidden"
+       style="background:color-mix(in srgb, var(--navy) 85%, transparent); backdrop-filter: blur(6px);">
+    <div class="mx-auto max-w-4xl px-4 py-3 flex items-center gap-3 text-white">
+      <span class="text-sm/6 opacity-90">Leo Celija – CV (A4)</span>
+      <div class="ml-auto flex items-center gap-2">
+        <button onclick="window.print()"
+          class="rounded-full px-4 py-2 text-sm font-semibold bg-[var(--gold)] hover:bg-[var(--gold-700)] text-[var(--navy)] shadow">
           Print / Save PDF
         </button>
       </div>
@@ -31,37 +40,41 @@
   <!-- Page -->
   <main class="mx-auto max-w-4xl p-6 print:p-10">
     <article class="bg-white rounded-3xl shadow-sm ring-1 ring-neutral-200 print:shadow-none print:ring-0">
+
       <!-- Header -->
       <header class="p-8 pb-4 md:p-10 md:pb-6">
         <h1 class="text-3xl md:text-4xl font-semibold tracking-tight">Leo Celija</h1>
         <p class="mt-2 max-w-3xl text-neutral-700 leading-relaxed">
-          Managing Director / Co-Founder — Sales Acceleration • Investor Liquidity • Sales Coaching (Nordics)
+          Managing Director / Co-Founder — Sales Acceleration • Liquidity • Sales Coaching
         </p>
 
         <!-- Contacts + actions -->
         <div class="mt-4 flex flex-wrap items-center gap-3 text-sm text-neutral-700">
           <div class="flex items-center gap-2 mr-2">
-            <span class="inline-block size-2 rounded-full bg-emerald-500"></span>
+            <span class="inline-block size-2 rounded-full" style="background:var(--gold)"></span>
             Gothenburg, Sweden
           </div>
 
-          <!-- Phone -->
-          <a class="underline decoration-neutral-300 hover:decoration-neutral-800" href="tel:+46737846011">+46 737 846011</a>
+          <a class="underline decoration-neutral-300 hover:decoration-neutral-800"
+             href="tel:+46737846011">+46 737 846011</a>
 
-          <!-- WhatsApp beside phone -->
-          <a class="px-2 py-1 rounded-full ring-1 ring-neutral-300 hover:ring-neutral-600"
+          <a class="rounded-full px-3 py-1.5 ring-1 ring-neutral-300 hover:ring-neutral-600 bg-[var(--gold)] hover:bg-[var(--gold-700)] text-[var(--navy)] font-medium"
              href="https://wa.me/46737846011?text=Hi%20Leo%2C%20I%20saw%20your%20CV%20and%20would%20like%20to%20connect."
-             target="_blank" rel="noopener" aria-label="Chat on WhatsApp">WhatsApp</a>
+             target="_blank" rel="noopener">WhatsApp</a>
 
-          <!-- Email -->
-          <a class="underline decoration-neutral-300 hover:decoration-neutral-800" href="mailto:leo.celija@gmail.com">leo.celija@gmail.com</a>
+          <a class="underline decoration-neutral-300 hover:decoration-neutral-800"
+             href="mailto:leo.celija@gmail.com">leo.celija@gmail.com</a>
 
-          <!-- LinkedIn link -->
-          <a class="underline decoration-neutral-300 hover:decoration-neutral-800" href="https://linkedin.com/in/leocelija" target="_blank" rel="noopener">linkedin.com/in/leocelija</a>
+          <a class="underline decoration-neutral-300 hover:decoration-neutral-800"
+             href="https://linkedin.com/in/leocelija" target="_blank" rel="noopener">
+             linkedin.com/in/leocelija
+          </a>
 
-          <!-- QR toggle -->
-          <button id="qrToggle" class="ml-auto px-3 py-1.5 rounded-full text-xs ring-1 ring-neutral-300 hover:ring-neutral-600 print:hidden"
-                  type="button" aria-expanded="false" aria-controls="qrCard">LinkedIn QR</button>
+          <button id="qrToggle"
+            class="ml-auto rounded-full px-3 py-1.5 text-xs font-semibold bg-[var(--gold)] hover:bg-[var(--gold-700)] text-[var(--navy)] ring-1 ring-neutral-200 print:hidden"
+            type="button" aria-expanded="false" aria-controls="qrCard">
+            LinkedIn QR
+          </button>
         </div>
 
         <!-- LinkedIn QR -->
@@ -73,36 +86,35 @@
         </div>
       </header>
 
-      <!-- Compact content (≈1–1.5 page) -->
+      <!-- WHO / WHAT / HOW (super short) -->
       <section class="px-8 md:px-10 pb-2">
-        <h2 class="pt-1 pb-2 text-xs tracking-[0.35em] text-neutral-600">PROFILE</h2>
+        <h2 class="pt-1 pb-2 text-xs tracking-[0.35em] text-neutral-600">WHO I AM</h2>
         <p class="text-sm leading-6 text-neutral-800">
-          Operator-consultant and rainmaker. I help SME leaders create order, unlock cash, and win deals fast — hands-on, discreet, precise.
+          Operator-consultant and closer. I step into messy commercial situations, bring order, and move revenue and cash forward fast — quietly and hands-on.
         </p>
       </section>
 
       <section class="px-8 md:px-10 pb-2">
-        <h2 class="pt-3 pb-2 text-xs tracking-[0.35em] text-neutral-600">CORE STRENGTHS</h2>
+        <h2 class="pt-3 pb-2 text-xs tracking-[0.35em] text-neutral-600">WHAT I DO BEST</h2>
         <ul class="list-disc pl-5 text-sm leading-6 text-neutral-800 space-y-1">
-          <li>Sales acceleration & pipeline lift</li>
-          <li>Investor liquidity & secondaries</li>
-          <li>Deal playbooks and live coaching</li>
-          <li>48h diagnostics & 30–60d resets</li>
-          <li>Stakeholder trust, simple KPIs</li>
+          <li>Lift pipeline and close rates</li>
+          <li>Recover and unlock liquidity</li>
+          <li>Install simple weekly sales rhythm and clear KPIs</li>
+          <li>Coach founders/teams live on real deals</li>
         </ul>
       </section>
 
       <section class="px-8 md:px-10 pb-2">
-        <h2 class="pt-3 pb-2 text-xs tracking-[0.35em] text-neutral-600">SIGNATURE RESULTS</h2>
+        <h2 class="pt-3 pb-2 text-xs tracking-[0.35em] text-neutral-600">HOW I’VE DONE IT</h2>
         <ul class="list-disc pl-5 text-sm leading-6 text-neutral-900 space-y-1">
-          <li>61 client cases with ~85% liquidity recovery (2022–2025)</li>
-          <li>SEK 1.8M in 7 months via productised offers + partners</li>
-          <li>KPI lift ≤2 weeks with Guardian Model™</li>
-          <li>External agent engine driving qualified EU/Nordics pipeline</li>
-          <li>Industrial services (~SEK 250m): IM in 14 days; 18-buyer shortlist; mandate won</li>
+          <li><b>61 client engagements</b> with ~85% liquidity recovery (2022–2025)</li>
+          <li><b>SEK 1.8M</b> in 7 months from productised offers + partners</li>
+          <li><b>2-week KPI lift</b> by installing tight cadences and deal playbooks</li>
+          <li>Built an external agent engine delivering qualified EU/Nordics pipeline</li>
         </ul>
       </section>
 
+      <!-- Experience (trimmed, no SweHedge, no VHF) -->
       <section class="px-8 md:px-10 pb-2">
         <h2 class="pt-3 pb-2 text-xs tracking-[0.35em] text-neutral-600">RECENT EXPERIENCE</h2>
         <div class="grid md:grid-cols-2 gap-4 text-sm leading-6 text-neutral-800">
@@ -112,8 +124,8 @@
               <span class="text-xs text-neutral-600">2025–present</span>
             </div>
             <ul class="mt-1 list-disc pl-5 space-y-1">
-              <li>48h diagnostic; 30–60d reset across Sales • People • Liquidity</li>
-              <li>Productised services; weekly cadence and simple dashboards</li>
+              <li>Rapid 48h diagnostic; 30–60d resets for Sales • People • Liquidity</li>
+              <li>Productised offers; simple dashboards; weekly operating rhythm</li>
             </ul>
           </div>
           <div class="rounded-2xl p-4 ring-1 ring-neutral-200">
@@ -122,8 +134,8 @@
               <span class="text-xs text-neutral-600">2022–present</span>
             </div>
             <ul class="mt-1 list-disc pl-5 space-y-1">
-              <li>VHF Method™ across 61 cases; 70/30 loss-deduction structures</li>
-              <li>Partner network across EU; measurable cash recovery</li>
+              <li>Led cash-recovery and secondary solutions for SMEs</li>
+              <li>Built partner network across EU; consistent, measurable outcomes</li>
             </ul>
           </div>
         </div>
@@ -150,8 +162,9 @@
           </div>
           <div>
             <h2 class="pt-3 pb-2 text-xs tracking-[0.35em] text-neutral-600">SERVICES</h2>
-            <p>Sales Acceleration • Investor Liquidity • Sales Coaching</p>
-            <div class="mt-2 rounded-2xl border border-neutral-200 p-3 text-xs text-neutral-700">
+            <p>Sales Acceleration • Liquidity • Sales Coaching</p>
+            <div class="mt-2 rounded-2xl p-3 text-xs"
+                 style="background:var(--gold); color:var(--navy);">
               Next step: 30-min discovery on a live account. If useful, we shape a joint SOW; if not, you keep the notes.
             </div>
           </div>
@@ -160,7 +173,7 @@
       <div class="h-6"></div>
     </article>
 
-    <p class="mt-4 text-center text-xs text-neutral-500 print:hidden">
+    <p class="mt-4 text-center text-xs text-white/80 print:hidden">
       Tip: Print → Save as PDF for a tight 1–1.5 page.
     </p>
   </main>
