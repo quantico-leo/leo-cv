@@ -10,34 +10,25 @@
       --navy:#0b2740; --navy-2:#113356; --navy-3:#143a60;
       --gold:#e3b23c; --gold-700:#c59623;
     }
-    /* Base + ensure colors print */
+    /* Ensure colors print */
     *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
     body{ background:linear-gradient(180deg,var(--navy) 0%, var(--navy-2) 65%, var(--navy-3) 100%); }
 
-    /* One A4 page print */
+    /* One A4 page (clean white background in PDF) */
     @media print{
-  @page{ size:A4; margin:10mm; }
+      @page{ size:A4; margin:10mm; }
+      html,body{ background:#ffffff !important; }
+      .print\:hidden{ display:none !important; }
+      .print\:ring-0,.print\:shadow-none{ box-shadow:none !important; }
+      h1{ font-size:22px !important; line-height:1.2 !important; }
+      .print-sm{ font-size:11px !important; line-height:1.35 !important; }
+      .print-tight{ padding:14px !important; }
+      .print-tight-y{ padding-top:8px !important; padding-bottom:8px !important; }
+      #qrPopover{ display:none !important; }
+      article,header,section{ page-break-inside:avoid; }
+    }
 
-  /* 1) Gör bakgrunden helt vit i PDF */
-  html, body{ background:#ffffff !important; }
-
-  /* 2) Dölj topbaren och skuggor så det blir rent */
-  .print\:hidden{ display:none !important; }
-  .print\:ring-0, .print\:shadow-none{ box-shadow:none !important; }
-
-  /* 3) Kompakt typografi för en sida */
-  h1{ font-size:22px !important; line-height:1.2 !important; }
-  .print-sm{ font-size:11px !important; line-height:1.35 !important; }
-  .print-tight{ padding:14px !important; }
-  .print-tight-y{ padding-top:8px !important; padding-bottom:8px !important; }
-
-  /* 4) Stäng QR i PDF och undvik sidbrytningar inne i sektioner */
-  #qrPopover{ display:none !important; }
-  article, header, section{ page-break-inside: avoid; }
-}
-
-
-    /* Gold card print tweaks */
+    /* Gold card tweaks */
     .gold-card li::marker{ color:var(--navy); }
     .gold-card{ line-height:1.5; }
     @media print{ .gold-card{ line-height:1.35 !important; } }
@@ -50,7 +41,11 @@
        style="background:color-mix(in srgb, var(--navy) 85%, transparent); backdrop-filter:blur(6px);">
     <div class="mx-auto max-w-4xl px-4 py-2 flex items-center gap-3 text-white">
       <span class="text-xs/5 opacity-90">Leo Celija · Résumé (A4)</span>
-      <div class="ml-auto">
+      <div class="ml-auto flex items-center gap-2">
+        <a href="ats.html"
+           class="rounded-full px-3 py-1.5 text-xs font-semibold bg-white/10 text-white ring-1 ring-white/20 hover:bg-white/20">
+          ATS Version
+        </a>
         <button onclick="window.print()"
           class="rounded-full px-3 py-1.5 text-xs font-semibold bg-[var(--gold)] hover:bg-[var(--gold-700)] text-[var(--navy)] shadow">
           Print / Save PDF
@@ -77,7 +72,7 @@
             <span>Gothenburg, Sweden</span>
             <a class="underline decoration-neutral-300 hover:decoration-neutral-800" href="tel:+46737846011">+46 737 846011</a>
             <a class="underline decoration-neutral-300 hover:decoration-neutral-800" href="mailto:leo.celija@gmail.com">leo.celija@gmail.com</a>
-            <a class="underline decoration-neutral-300 hover:decoration-neutral-800" target="_blank" rel="noopener" href="https://linkedin.com/in/leocelija">linkedin.com/in/leocelija</a>
+            <a class="underline decoration-neutral-300 hover:decoration-neutral-800" target="_blank" rel="noopener" href="https://www.linkedin.com/in/leocelija">linkedin.com/in/leocelija</a>
           </div>
 
           <div class="ml-auto flex items-center gap-2">
@@ -99,13 +94,18 @@
             </button>
           </div>
 
-          <!-- QR Popover -->
+          <!-- QR Popover (clickable image + fallback link) -->
           <div id="qrPopover"
                class="hidden absolute right-0 top-[calc(100%+8px)] bg-white rounded-2xl ring-1 ring-neutral-200 p-2 w-[190px] shadow">
-            <img class="mx-auto block"
-                 src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https%3A%2F%2Flinkedin.com%2Fin%2Fleocelija"
-                 alt="LinkedIn QR: linkedin.com/in/leocelija" width="160" height="160">
-            <div class="mt-1 text-center text-[10px] text-neutral-600">Scan to open LinkedIn</div>
+            <a href="https://www.linkedin.com/in/leocelija" target="_blank" rel="noopener" class="block">
+              <img class="mx-auto block"
+                   src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fleocelija"
+                   alt="LinkedIn QR: www.linkedin.com/in/leocelija" width="160" height="160">
+            </a>
+            <div class="mt-1 text-center text-[10px] text-neutral-600">
+              Scan or <a href="https://www.linkedin.com/in/leocelija" target="_blank" rel="noopener"
+                         class="underline decoration-neutral-300 hover:decoration-neutral-800">open LinkedIn</a>
+            </div>
           </div>
         </div>
       </header>
@@ -170,7 +170,8 @@
           </div>
         </div>
 
-        <p class="mt-2 text-[11px] text-neutral-600 print-sm">
+        <!-- Earlier: now in black (stronger) -->
+        <p class="mt-2 text-[11px] text-neutral-900 print-sm">
           Earlier: Göteborg Energi (Corporate Manager) · United Cash Back (Nordic Sales Exec) · Fisher Investments Europe (Regional Sales) · Skandia (Financial Advisor)
         </p>
       </section>
@@ -206,7 +207,7 @@
     </article>
 
     <p class="mt-3 text-center text-[11px] text-white/80 print:hidden">
-      Tip: when exporting to PDF, turn **Background graphics ON** and set **Scale ~90–95%** if it spills to page 2.
+      Tip: when exporting to PDF, turn <b>Background graphics ON</b> and set <b>Scale ~90–95%</b> if it spills to page 2.
     </p>
   </main>
 
