@@ -41,7 +41,7 @@
     .earlier-strong{ color:#0a0a0a; font-weight:700; }
 
     /* Link-like styling for the LinkedIn pill (works in PDF) */
-    .link-pill{ display:inline-flex; align-items:center; justify-content:center; border-radius:9999px; height:2rem; padding-left:0.625rem; padding-right:0.625rem; font-size:11px; font-weight:700; background:var(--gold); color:var(--navy); border:1px solid rgb(212 212 212); }
+    .link-pill{ display:inline-flex; align-items:center; justify-content:center; border-radius:9999px; height:2rem; padding:0 0.625rem; font-size:11px; font-weight:700; background:var(--gold); color:var(--navy); border:1px solid rgb(212 212 212); }
     .link-pill:hover{ background:var(--gold-700); border-color:rgb(82 82 82); }
   </style>
 </head>
@@ -98,18 +98,18 @@
               </svg>
             </a>
 
-            <!-- LinkedIn pill: change from <button> to <a> so it's clickable in PDFs -->
+            <!-- LinkedIn pill as real <a> so it's clickable in PDFs -->
             <a id="linkedinPill" href="https://www.linkedin.com/in/leocelija" target="_blank" rel="noopener" class="link-pill" aria-label="Open LinkedIn profile">
               LinkedIn&nbsp;QR
             </a>
 
-            <!-- Print-only LinkedIn badge (guaranteed clickable in PDF) -->
+            <!-- Print-only LinkedIn badge (extra guarantee clickable in PDF) -->
             <a href="https://www.linkedin.com/in/leocelija" target="_blank" rel="noopener" class="hidden print:inline-flex link-pill" aria-label="Open LinkedIn profile (print)">
               View LinkedIn Profile
             </a>
           </div>
 
-          <!-- QR Popover (kept for screen; hidden in print) -->
+          <!-- QR Popover (screen only) -->
           <div id="qrPopover"
                class="hidden absolute right-0 top-[calc(100%+8px)] bg-white rounded-2xl ring-1 ring-neutral-200 p-2 w-[190px] shadow">
             <a href="https://www.linkedin.com/in/leocelija" target="_blank" rel="noopener" class="block">
@@ -146,7 +146,7 @@
       <section class="px-6 md:px-8 pb-1 print-tight-y">
         <h2 class="pt-2 pb-1 text-[10px] tracking-[0.35em] text-neutral-600">HOW I MAKE IT HAPPEN</h2>
         <ul class="list-disc pl-5 text-[13px] leading-[1.5] text-neutral-900 space-y-0.5 print-sm">
-          <li><b>61 client engagements</b> with ~85% liquidity recovery (2022·2025)</li>
+          <li><b>61 client engagements</b> with ~85% liquidity recovery (2022-2025)</li>
           <li><b>SEK 1.8M</b> in 7 months via productised offers and partner network</li>
           <li><b>≤2-week KPI lift</b> by installing tight cadences and deal playbooks</li>
         </ul>
@@ -156,38 +156,45 @@
       <section class="px-6 md:px-8 pb-1 print-tight-y">
         <h2 class="pt-2 pb-1 text-[10px] tracking-[0.35em] text-neutral-600">SHORT PAST EXPERIENCE</h2>
         <div class="grid md:grid-cols-2 gap-3 text-[13px] leading-[1.5] print-sm">
+
+          <!-- ArceoConsult -->
           <div class="gold-card exp-strong rounded-xl p-3 ring-2 ring-[color:var(--gold-700)]"
                style="background:var(--gold); color:var(--navy);">
             <div class="flex items-baseline justify-between gap-2">
               <h3 class="tracking-tight">
                 Founder &amp; Managing Partner · <span class="font-extrabold">ArceoConsult</span>
               </h3>
-              <span class="text-[11px] opacity-80 font-semibold">2025·present</span>
+              <span class="text-[11px] opacity-80 font-semibold">2025-Present</span>
             </div>
             <ul class="mt-1 list-disc pl-5 space-y-0.5">
-              <li>48h diagnostic; 30·60d resets (Sales · People · Liquidity)</li>
+              <li>48h diagnostic; 30-60d resets (Sales · People · Liquidity)</li>
               <li>Productised offers; simple dashboards; weekly cadence</li>
             </ul>
           </div>
 
+          <!-- SweInvest -->
           <div class="gold-card exp-strong rounded-xl p-3 ring-2 ring-[color:var(--gold-700)]"
                style="background:var(--gold); color:var(--navy);">
             <div class="flex items-baseline justify-between gap-2">
               <h3 class="tracking-tight">
                 Founder &amp; CEO · <span class="font-extrabold">SweInvest Finance AB</span>
               </h3>
-              <span class="text-[11px] opacity-80 font-semibold">2022·present</span>
+              <span class="text-[11px] opacity-80 font-semibold">2022-Present</span>
             </div>
             <ul class="mt-1 list-disc pl-5 space-y-0.5">
               <li>Cash-recovery and liquidity solutions for SMEs</li>
               <li>Built EU partner network; consistent measurable outcomes</li>
             </ul>
           </div>
+
         </div>
 
         <!-- Earlier: stronger & darker for print -->
         <p class="mt-2 text-[11px] print-sm earlier-strong">
-          Earlier: <strong>Göteborg Energi (Corporate Manager)</strong> · <strong>United Cash Back (Nordic Sales Exec)</strong> · <strong>Fisher Investments Europe (Regional Sales)</strong> · <strong>Skandia (Financial Advisor)</strong>
+          Earlier: <strong>Göteborg Energi (Corporate Manager)</strong> ·
+          <strong>United Cash Back (Nordic Sales Exec)</strong> ·
+          <strong>Fisher Investments Europe (Regional Sales)</strong> ·
+          <strong>Skandia (Financial Advisor)</strong>
         </p>
       </section>
 
