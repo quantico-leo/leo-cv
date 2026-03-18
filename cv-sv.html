@@ -28,36 +28,15 @@
     .gold-card li::marker{ color:var(--navy); }
     .gold-card{ line-height:1.5; }
     @media print{ .gold-card{ line-height:1.35 !important; } }
-
     .exp-strong h3{ font-weight:800; letter-spacing:-0.005em; }
     .exp-strong ul li{ font-weight:600; }
-
-    .role-header h3 { font-weight:700; color:var(--navy); }
-    .role-header span { color:#525252; font-weight:600; font-size:11px; }
-
-    .badge{
-      display:inline-block;
-      background:var(--gold);
-      color:var(--navy);
-      font-size:10px;
-      font-weight:800;
-      border-radius:9999px;
-      padding:1px 8px;
-      letter-spacing:0.04em;
-      margin-left:4px;
-      vertical-align:middle;
-    }
-
-    .section-divider{
-      border:none;
-      border-top:1px solid #e5e5e5;
-      margin: 4px 0;
-    }
+    .role-header h3{ font-weight:700; color:var(--navy); }
+    .role-header span{ color:#525252; font-weight:600; font-size:11px; }
+    .section-divider{ border:none; border-top:1px solid #e5e5e5; margin:4px 0; }
   </style>
 </head>
 <body class="min-h-screen text-neutral-900 antialiased font-sans">
 
-  <!-- ── NAVBAR ── -->
   <div class="sticky top-0 z-40 border-b border-white/10 print:hidden"
        style="background:rgba(11,39,64,.90);backdrop-filter:blur(8px);">
     <div class="mx-auto max-w-4xl px-4 py-2 flex items-center gap-3 text-white">
@@ -83,10 +62,8 @@
   <main class="mx-auto max-w-4xl p-4 print:p-0">
     <article class="bg-white rounded-3xl shadow-sm ring-1 ring-neutral-200 print:shadow-none print:ring-0 print-tight">
 
-      <!-- ── HEADER / BANNER ── -->
       <header class="relative overflow-hidden rounded-t-3xl print-tight"
               style="background:linear-gradient(120deg,var(--navy) 60%,var(--navy-3) 100%);">
-        <!-- Decorative circles -->
         <div class="absolute -top-8 -right-8 size-40 rounded-full opacity-10"
              style="background:var(--gold);"></div>
         <div class="absolute -bottom-6 -left-6 size-24 rounded-full opacity-10"
@@ -95,19 +72,13 @@
         <div class="relative p-6 md:p-8 text-white">
           <div class="flex items-start justify-between gap-4">
             <div>
-              <!-- Tagline -->
               <p class="text-[10px] tracking-[0.35em] font-bold mb-2 print-sm"
-                 style="color:var(--gold);">SENIOR KONSULT · CYBER & GRC · STRATEGISK FÖRSÄLJNING</p>
-
+                 style="color:var(--gold);">SENIOR KONSULT - CYBER & GRC - STRATEGISK FORSALJNING</p>
               <h1 class="text-3xl md:text-4xl font-black tracking-tight leading-none">Leo Celija</h1>
-
-              <!-- Value proposition -->
               <p class="mt-2 text-sm md:text-base font-medium text-white/80 max-w-xl leading-relaxed print-sm">
-                Omsätter komplex reglering (NIS2, DORA, ISO 27001) till konkret affärsnytta —
-                med bevisad förmåga att driva tillväxt, reducera risk och skapa förtroende på C-level.
+                Kombinerar komplex B2B-forsaljning, GRC-radgivning och operationell implementation
+                med bevisad formaga att driva tillvaxt och skapa fortroende pa C-level.
               </p>
-
-              <!-- Keywords / pills -->
               <div class="mt-3 flex flex-wrap gap-1.5 print:hidden">
                 <span class="text-[10px] font-bold px-2 py-0.5 rounded-full border border-white/20 text-white/70">NIS2</span>
                 <span class="text-[10px] font-bold px-2 py-0.5 rounded-full border border-white/20 text-white/70">DORA</span>
@@ -119,16 +90,12 @@
                 <span class="text-[10px] font-bold px-2 py-0.5 rounded-full border border-white/20 text-white/70">HNWI Advisory</span>
               </div>
             </div>
-
-            <!-- Monogram badge -->
             <div class="hidden md:flex shrink-0 size-20 rounded-2xl items-center justify-center text-3xl font-black shadow-lg"
                  style="background:var(--gold);color:var(--navy);">LC</div>
           </div>
 
-          <!-- Contact row -->
-          <div class="mt-4 pt-3 border-t border-white/15 flex flex-wrap items-center gap-x-4 gap-y-1
-                      text-xs text-white/70 print-sm">
-            <span>📍 Göteborg, Sverige</span>
+          <div class="mt-4 pt-3 border-t border-white/15 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-white/70 print-sm">
+            <span>Goteborg, Sverige</span>
             <a class="hover:text-white" href="tel:+46737846011">073-784 60 11</a>
             <a class="hover:text-white" href="mailto:leo@avertum.se">leo@avertum.se</a>
             <a class="hover:text-white" href="https://www.linkedin.com/in/leocelija" target="_blank">linkedin.com/in/leocelija</a>
@@ -137,55 +104,53 @@
         </div>
       </header>
 
-      <!-- ── PROFESSIONELL PROFIL ── -->
       <section class="px-6 md:px-8 pt-4 pb-1 print-tight-y">
         <h2 class="pb-1 text-[10px] tracking-[0.35em] text-neutral-500 font-bold">PROFESSIONELL PROFIL</h2>
         <p class="text-[13px] leading-[1.55] text-neutral-800 print-sm">
           Senior affärsutvecklare och konsult med dokumenterad förmåga att kombinera komplex B2B-försäljning,
           GRC-rådgivning och operationell implementation. Erfarenhet från internationell finans (Fisher Investments, London),
           reglerade industri- och infrastrukturmiljöer samt eget konsultbolag med 1,8 MSEK i omsättning de första 7 månaderna.
-          Arbetar naturligt på C-level, omsätter NIS2/DORA-krav till handlingsbara planer och driver mätbara affärsresultat.
+          Arbetar naturligt på C-level och driver mätbara affärsresultat.
         </p>
         <p class="mt-1.5 text-[13px] leading-[1.55] text-neutral-800 print-sm">
-          <b>Fokus:</b> NIS2 · DORA · Supply Chain Security · Operational Resilience · ICT Risk Management ·
-          Strategisk Försäljning mot reglerade sektorer (energi, finans, industri, offentlig sektor).
+          <b>Fokus:</b> NIS2, DORA, Supply Chain Security, Operational Resilience, ICT Risk Management
+          och strategisk försäljning mot reglerade sektorer inom energi, finans, industri och offentlig sektor.
         </p>
       </section>
 
       <hr class="section-divider mx-6 md:mx-8" />
 
-      <!-- ── NYCKELKOMPETENSER ── -->
       <section class="px-6 md:px-8 pb-1 print-tight-y">
         <h2 class="pt-2 pb-1 text-[10px] tracking-[0.35em] text-neutral-500 font-bold">NYCKELKOMPETENSER</h2>
         <div class="grid md:grid-cols-3 gap-3 text-[13px] print-sm">
           <div class="rounded-xl p-3 bg-neutral-50 ring-1 ring-neutral-100">
-            <p class="font-black text-[11px] mb-1" style="color:var(--navy);">FÖRSÄLJNING & RÅDGIVNING</p>
+            <p class="font-black text-[11px] mb-1" style="color:var(--navy);">FÖRSÄLJNING OCH RÅDGIVNING</p>
             <ul class="list-disc pl-4 space-y-0.5 text-neutral-700">
               >Strategisk B2B-försäljning</li>
               >Key Account Management</li>
               >C-level Stakeholder Management</li>
-              >HNWI Advisory (finansiell kontext)</li>
+              >HNWI Advisory</li>
               >Rådgivande försäljning, full säljcykel</li>
             </ul>
           </div>
           <div class="rounded-xl p-3 bg-neutral-50 ring-1 ring-neutral-100">
-            <p class="font-black text-[11px] mb-1" style="color:var(--navy);">CYBER & GRC</p>
+            <p class="font-black text-[11px] mb-1" style="color:var(--navy);">CYBER OCH GRC</p>
             <ul class="list-disc pl-4 space-y-0.5 text-neutral-700">
-              >NIS2 & DORA-anpassning</li>
+              >NIS2 och DORA-anpassning</li>
               >Supply Chain Security</li>
-              >ICT-risk & Kontroller</li>
+              >ICT-risk och kontroller</li>
               >Incident Response Playbooks</li>
-              >GAP-analys & Revisionsunderlag</li>
+              >GAP-analys och revisionsunderlag</li>
             </ul>
           </div>
           <div class="rounded-xl p-3 bg-neutral-50 ring-1 ring-neutral-100">
-            <p class="font-black text-[11px] mb-1" style="color:var(--navy);">OPERATIONELLT & ANALYS</p>
+            <p class="font-black text-[11px] mb-1" style="color:var(--navy);">OPERATIONELLT OCH ANALYS</p>
             <ul class="list-disc pl-4 space-y-0.5 text-neutral-700">
-              >Åtgärdsplaner & Implementation</li>
+              >Åtgärdsplaner och implementation</li>
               >Operational Resilience</li>
-              >Riskbedömning & Prioritering</li>
+              >Riskbedömning och prioritering</li>
               >CRM (Salesforce)</li>
-              >LLM-verktyg & OSINT (Threat Intel)</li>
+              >LLM-verktyg och OSINT</li>
             </ul>
           </div>
         </div>
@@ -193,21 +158,31 @@
 
       <hr class="section-divider mx-6 md:mx-8" />
 
-      <!-- ── ARBETSLIVSERFARENHET ── -->
       <section class="px-6 md:px-8 pb-1 print-tight-y">
         <h2 class="pt-2 pb-1 text-[10px] tracking-[0.35em] text-neutral-500 font-bold">ARBETSLIVSERFARENHET</h2>
 
-        <!-- Avertum -->
         <div class="gold-card exp-strong rounded-xl p-4 ring-2 mb-3"
-             style="background:var(--gold);color:var(--navy);ring-color:var(--gold-700);">
+             style="background:var(--gold);color:var(--navy);">
           <div class="flex items-start justify-between gap-2 flex-wrap">
             <div>
-              <p class="text-[10px] font-black tracking-widest opacity-70">GRUNDARE & SENIOR KONSULT</p>
+              <p class="text-[10px] font-black tracking-widest opacity-70">GRUNDARE OCH SENIOR KONSULT</p>
               <h3 class="text-lg tracking-tight leading-tight">Avertum Group AB</h3>
             </div>
-            <span class="text-xs font-bold opacity-80 whitespace-nowrap mt-1">2022 – Pågående · Göteborg</span>
+            <span class="text-xs font-bold opacity-80 whitespace-nowrap mt-1">2022 - Pågående, Göteborg</span>
           </div>
           <ul class="mt-2 list-disc pl-5 space-y-1 text-[13px]">
             >Genererade <b>1,8 MSEK i omsättning under de första 7 månaderna</b> genom strukturerad bearbetning av nya marknadssegment inom industri och infrastruktur.</li>
-            >Leder strategiska uppdrag inom affärsrisk, NIS2/DORA-compliance och operationell motståndskraft; stöttar ledningsgrupper med analys, prioritering och exekvering.</li>
-            >Utvecklar Incident Response Playbooks, ramverk
+            >Leder strategiska uppdrag inom affärsrisk, NIS2/DORA-compliance och operationell motståndskraft och stöttar ledningsgrupper med analys, prioritering och exekvering.</li>
+            >Utvecklar Incident Response Playbooks, ramverk för leverantörsrisk, åtgärdsplaner och compliance-underlag inför granskning.</li>
+            >Genomförde en GAP-analys och riskbedömning för ett industribolag, vilket resulterade i en robust implementeringsplan för leverantörssäkerhet.</li>
+            >Rådger ledningsgrupper och C-level om ICT-riskstyrning och regulatoriska krav inom reglerade sektorer.</li>
+          </ul>
+        </div>
+
+        <div class="mb-3">
+          <div class="flex items-baseline justify-between gap-2 role-header">
+            <h3 class="text-[14px]">Key Account Manager (KAM) - <span class="font-normal text-neutral-800">Göteborg Energi</span></h3>
+            <span>2022, Göteborg</span>
+          </div>
+          <ul class="list-disc pl-5 mt-1 text-[13px] leading-[1.55] text-neutral-800 space-y-0.5 print-sm">
+            >Förvaltade och utvecklade strategiska nyckelkunder inom fastighet och industri.
